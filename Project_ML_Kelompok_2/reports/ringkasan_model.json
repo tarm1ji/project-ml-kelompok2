@@ -1,0 +1,290 @@
+{
+  "nama_model": "Logistic Regression",
+  "n_train": 80000,
+  "n_test": 20000,
+  "n_fitur": 32,
+  "baseline_cv": {
+    "Logistic Regression": {
+      "accuracy": 0.8146,
+      "precision": 0.6724,
+      "recall": 0.8208,
+      "f1": 0.7392,
+      "roc_auc": 0.8996,
+      "pr_auc": 0.824
+    },
+    "XGBoost": {
+      "accuracy": 0.8146,
+      "precision": 0.6736,
+      "recall": 0.8164,
+      "f1": 0.7381,
+      "roc_auc": 0.8982,
+      "pr_auc": 0.8219
+    },
+    "Random Forest": {
+      "accuracy": 0.8226,
+      "precision": 0.7153,
+      "recall": 0.74,
+      "f1": 0.7275,
+      "roc_auc": 0.8905,
+      "pr_auc": 0.8032
+    }
+  },
+  "baseline_cv_std": {
+    "Logistic Regression": {
+      "accuracy": 0.002,
+      "precision": 0.0039,
+      "recall": 0.0057,
+      "f1": 0.0022,
+      "roc_auc": 0.0013,
+      "pr_auc": 0.0014
+    },
+    "XGBoost": {
+      "accuracy": 0.0018,
+      "precision": 0.003,
+      "recall": 0.0062,
+      "f1": 0.0027,
+      "roc_auc": 0.0014,
+      "pr_auc": 0.0013
+    },
+    "Random Forest": {
+      "accuracy": 0.0018,
+      "precision": 0.0024,
+      "recall": 0.0053,
+      "f1": 0.0033,
+      "roc_auc": 0.0016,
+      "pr_auc": 0.0029
+    }
+  },
+  "tuning": {
+    "Logistic Regression": {
+      "f1_cv": 0.7387,
+      "params": {
+        "class_weight": "balanced",
+        "C": 10
+      }
+    },
+    "Random Forest": {
+      "f1_cv": 0.73,
+      "params": {
+        "n_estimators": 200,
+        "min_samples_split": 10,
+        "min_samples_leaf": 1,
+        "max_features": "sqrt",
+        "max_depth": null
+      }
+    },
+    "XGBoost": {
+      "f1_cv": 0.7379,
+      "params": {
+        "subsample": 0.7,
+        "n_estimators": 400,
+        "min_child_weight": 1,
+        "max_depth": 5,
+        "learning_rate": 0.03,
+        "colsample_bytree": 0.7
+      }
+    }
+  },
+  "test_default": {
+    "XGBoost": {
+      "Accuracy": 0.8162,
+      "Precision": 0.6772,
+      "Recall": 0.8132,
+      "F1": 0.739,
+      "ROC-AUC": 0.8984,
+      "PR-AUC": 0.8216
+    },
+    "Logistic Regression": {
+      "Accuracy": 0.8144,
+      "Precision": 0.6731,
+      "Recall": 0.8169,
+      "F1": 0.7381,
+      "ROC-AUC": 0.8991,
+      "PR-AUC": 0.8246
+    },
+    "Random Forest": {
+      "Accuracy": 0.821,
+      "Precision": 0.7032,
+      "Recall": 0.7625,
+      "F1": 0.7317,
+      "ROC-AUC": 0.8916,
+      "PR-AUC": 0.8068
+    }
+  },
+  "threshold_f1": 0.57,
+  "threshold_recall80": 0.53,
+  "test_threshold": {
+    "0.50 (default)": {
+      "Accuracy": 0.8144,
+      "Precision": 0.6731,
+      "Recall": 0.8169,
+      "F1": 0.7381,
+      "ROC-AUC": 0.8991,
+      "PR-AUC": 0.8246
+    },
+    "0.57 (F1 optimal)": {
+      "Accuracy": 0.8287,
+      "Precision": 0.7145,
+      "Recall": 0.7741,
+      "F1": 0.7431,
+      "ROC-AUC": 0.8991,
+      "PR-AUC": 0.8246
+    },
+    "0.53 (Recall >= 80%)": {
+      "Accuracy": 0.8212,
+      "Precision": 0.6911,
+      "Recall": 0.798,
+      "F1": 0.7407,
+      "ROC-AUC": 0.8991,
+      "PR-AUC": 0.8246
+    }
+  },
+  "confusion_matrix": {
+    "tn": 11619,
+    "fp": 1980,
+    "fn": 1446,
+    "tp": 4955
+  },
+  "top_features": [
+    {
+      "Fitur": "gpa_semester_1",
+      "Nilai": -1.2639
+    },
+    {
+      "Fitur": "family_income_level_High",
+      "Nilai": -0.486
+    },
+    {
+      "Fitur": "tuition_up_to_date",
+      "Nilai": -0.3769
+    },
+    {
+      "Fitur": "family_income_level_Low",
+      "Nilai": 0.3461
+    },
+    {
+      "Fitur": "lms_logins_per_week",
+      "Nilai": -0.3128
+    },
+    {
+      "Fitur": "missed_deadlines",
+      "Nilai": 0.2912
+    },
+    {
+      "Fitur": "weekly_work_hours",
+      "Nilai": 0.2724
+    },
+    {
+      "Fitur": "attendance_rate",
+      "Nilai": -0.2698
+    },
+    {
+      "Fitur": "stress_level",
+      "Nilai": 0.2659
+    },
+    {
+      "Fitur": "units_failed",
+      "Nilai": 0.2638
+    },
+    {
+      "Fitur": "engagement_score",
+      "Nilai": -0.2363
+    },
+    {
+      "Fitur": "scholarship_holder",
+      "Nilai": -0.2185
+    },
+    {
+      "Fitur": "study_mode_Full-time",
+      "Nilai": -0.2065
+    },
+    {
+      "Fitur": "library_visits_per_month",
+      "Nilai": -0.1997
+    },
+    {
+      "Fitur": "first_generation",
+      "Nilai": 0.1631
+    },
+    {
+      "Fitur": "satisfaction_score",
+      "Nilai": -0.1427
+    },
+    {
+      "Fitur": "extracurricular_activities",
+      "Nilai": -0.1344
+    },
+    {
+      "Fitur": "gender_Male",
+      "Nilai": -0.134
+    },
+    {
+      "Fitur": "nationality_Canada",
+      "Nilai": -0.1245
+    },
+    {
+      "Fitur": "assignments_submitted_rate",
+      "Nilai": -0.1218
+    }
+  ],
+  "fit": {
+    "Train": {
+      "Accuracy": 0.8283,
+      "Precision": 0.7128,
+      "Recall": 0.7762,
+      "F1": 0.7431,
+      "ROC-AUC": 0.9,
+      "PR-AUC": 0.8247
+    },
+    "Test": {
+      "Accuracy": 0.8287,
+      "Precision": 0.7145,
+      "Recall": 0.7741,
+      "F1": 0.7431,
+      "ROC-AUC": 0.8991,
+      "PR-AUC": 0.8246
+    },
+    "Gap (Train - Test)": {
+      "Accuracy": -0.0004,
+      "Precision": -0.0017,
+      "Recall": 0.0021,
+      "F1": 0.0,
+      "ROC-AUC": 0.0009,
+      "PR-AUC": 0.0001
+    }
+  },
+  "error_groups": {
+    "True Positive": {
+      "Jumlah": 4955,
+      "GPA_Sem1": 1.71,
+      "Units_Failed": 4.77,
+      "Attendance": 65.57,
+      "Missed_Deadlines": 3.78,
+      "Probabilitas": 0.86
+    },
+    "False Negative": {
+      "Jumlah": 1446,
+      "GPA_Sem1": 2.61,
+      "Units_Failed": 2.54,
+      "Attendance": 75.23,
+      "Missed_Deadlines": 2.25,
+      "Probabilitas": 0.35
+    },
+    "False Positive": {
+      "Jumlah": 1980,
+      "GPA_Sem1": 2.07,
+      "Units_Failed": 3.86,
+      "Attendance": 69.0,
+      "Missed_Deadlines": 3.09,
+      "Probabilitas": 0.74
+    },
+    "True Negative": {
+      "Jumlah": 11619,
+      "GPA_Sem1": 3.03,
+      "Units_Failed": 1.68,
+      "Attendance": 80.03,
+      "Missed_Deadlines": 1.69,
+      "Probabilitas": 0.17
+    }
+  }
+}
