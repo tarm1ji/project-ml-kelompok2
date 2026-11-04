@@ -1,0 +1,14 @@
+-r requirements.txt
+
+# Notebook dan eksperimen
+jupyter>=1.0
+notebook>=7.0
+nbformat>=5.9
+nbconvert>=7.0
+xgboost==3.4.1
+matplotlib>=3.7
+seaborn>=0.13
+
+# Pembuatan gambar dan PPT
+python-pptx>=1.0
+Pillow>=10.0
